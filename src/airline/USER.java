@@ -1,4 +1,4 @@
-package quiz2;
+package airline;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

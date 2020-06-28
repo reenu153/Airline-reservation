@@ -1,4 +1,4 @@
-package quiz2;
+package airline;
 
         
 
@@ -114,6 +114,8 @@ public class HOME extends javax.swing.JFrame {
     }//GEN-LAST:event_userbuttonActionPerformed
 
     private void adminbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminbuttonActionPerformed
+        AdminLogin obj=new AdminLogin();
+        obj.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_adminbuttonActionPerformed
 
