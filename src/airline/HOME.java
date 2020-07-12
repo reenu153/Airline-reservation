@@ -109,7 +109,7 @@ public class HOME extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void userbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbuttonActionPerformed
-        USER info = new USER();
+        umenu info = new umenu();
         info.setVisible(true);
     }//GEN-LAST:event_userbuttonActionPerformed
 

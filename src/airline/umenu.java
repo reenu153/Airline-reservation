@@ -154,7 +154,8 @@ obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+holi_ss obj=new holi_ss();
+obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
