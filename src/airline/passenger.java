@@ -25,7 +25,7 @@ public class passenger extends javax.swing.JFrame {
      */
     public passenger() {
         initComponents();
-        String s1=PASS.getText();
+        String s1=pass.getText();
        int a=Integer.parseInt(s1); 
             
     }
@@ -61,7 +61,7 @@ public class passenger extends javax.swing.JFrame {
         ln3 = new javax.swing.JTextField();
         fn1 = new javax.swing.JTextField();
         cb2 = new javax.swing.JComboBox<>();
-        PASS = new javax.swing.JTextField();
+        pass = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         com2 = new javax.swing.JComboBox<>();
         fn2 = new javax.swing.JTextField();
@@ -156,11 +156,11 @@ public class passenger extends javax.swing.JFrame {
 
         cb2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MISS", "MRS", "MS", "MR", "UNDISCLOSED4" }));
 
-        PASS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PASS.setText("1");
-        PASS.addActionListener(new java.awt.event.ActionListener() {
+        pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pass.setText("1");
+        pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PASSActionPerformed(evt);
+                passActionPerformed(evt);
             }
         });
 
@@ -265,7 +265,7 @@ public class passenger extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PASS, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton4)
@@ -301,7 +301,7 @@ public class passenger extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(PASS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -381,21 +381,41 @@ public class passenger extends javax.swing.JFrame {
     {
         String s1=tf1.getText();
         String s2=tf2.getText();
-   
-            
+        String  p=pass.getText();
+        int pn=Integer.parseInt(p);
+        String f1=fn1.getText();
+        String f2=fn2.getText();
+        String f3=fn3.getText();
+        String f4=fn4.getText();
+        String f5=fn5.getText();
+        String l1=ln1.getText();
+        String l2=ln2.getText();
+        String l3=ln3.getText();
+        String l4=ln4.getText();
+        String l5=ln5.getText();
+        
         try {  
             Class.forName("com.mysql.jdbc.Driver");
             Connection c = DriverManager.getConnection("jdbc:mysql:///user","reenu","merryboy"); 
-            java.sql.Statement stmt=c.createStatement();  
+            java.sql.Statement stmt=c.createStatement();
+            stmt.executeUpdate("INSERT INTO add_flights " +"VALUES('100','"+fn1+"','"+ln1+"','','','')");
+            if(pn>=2)
+            stmt.executeUpdate("INSERT INTO add_flights " +"VALUES('101','"+fn2+"','"+ln2+"','','','')");
+            if(pn>=3)
+            stmt.executeUpdate("INSERT INTO add_flights " +"VALUES('102','"+fn3+"','"+ln3+"','','','')");
+            if(pn>=4)
+            stmt.executeUpdate("INSERT INTO add_flights " +"VALUES('103','"+fn4+"','"+ln4+"','','','')");
+            if(pn==5)
+            stmt.executeUpdate("INSERT INTO add_flights " +"VALUES('104','"+fn5+"','"+ln5+"','','','')");
+               
             stmt.executeUpdate("update passenger set contactno=s1,email=s2 where id=100"); 
             if(chk1.isSelected()==true)
-            stmt.executeUpdate("update passenger set price=price+3000 where id=100"); 
-                
+            stmt.executeUpdate("update passenger set price=price+3000 where id=100");        
         } 
           catch (ClassNotFoundException ex) {
-            
+           ex.printStackTrace();
         } catch (SQLException ex) {
-            
+            ex.printStackTrace();
         }
         payment obj=new payment();
         obj.setVisible(true);
@@ -408,15 +428,15 @@ public class passenger extends javax.swing.JFrame {
           // TODO add your handling code here:
     }//GEN-LAST:event_fn1ActionPerformed
 
-    private void PASSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PASSActionPerformed
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PASSActionPerformed
+    }//GEN-LAST:event_passActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String s1=PASS.getText();
+        String s1=pass.getText();
         int a=Integer.parseInt(s1);
         a=a+1;
-        PASS.setText(String.valueOf(a));// TODO add your handling code here:
+        pass.setText(String.valueOf(a));// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void fn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fn2ActionPerformed
@@ -479,7 +499,6 @@ public class passenger extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField PASS;
     private javax.swing.JComboBox<String> cb2;
     private javax.swing.JCheckBox chk1;
     private javax.swing.JComboBox<String> com2;
@@ -511,6 +530,7 @@ public class passenger extends javax.swing.JFrame {
     private javax.swing.JTextField ln3;
     private javax.swing.JTextField ln4;
     private javax.swing.JTextField ln5;
+    public javax.swing.JTextField pass;
     private javax.swing.JTextField tf1;
     private javax.swing.JTextField tf10;
     private javax.swing.JTextField tf2;
