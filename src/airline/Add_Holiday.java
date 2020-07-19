@@ -42,13 +42,22 @@ public class Add_Holiday extends javax.swing.JFrame {
         jSlider1 = new javax.swing.JSlider();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Add Holiday Packages ");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(94, 6, 212, 22);
 
         jLabel2.setText("Package Name");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(36, 44, 91, 16);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(145, 39, 191, 26);
 
         jLabel3.setText("Duration");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(36, 82, 91, 16);
 
         jTextField2.setText("From");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -56,10 +65,16 @@ public class Add_Holiday extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(145, 77, 93, 26);
 
         jTextField3.setText("To");
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(244, 77, 92, 26);
 
         jLabel4.setText("FLights");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(36, 120, 46, 16);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AI136", "EH543", "EM67" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,82 +82,30 @@ public class Add_Holiday extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(145, 116, 97, 27);
 
         jLabel5.setText("Destination");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(330, 153, 73, 16);
 
         jLabel6.setText("Source");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(36, 153, 42, 16);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KOCHI INTERNATIONAL AIRPORT(COK)", "DUBAI INTERNATIONAL AIRPORT(BXB)", "THIRUVANANTHAPURAM INTERNATIONAL AIRPORT(TRV)", "ABU DHABI INTERNATIONAL AIRPORT(AUH)", "BENGALURU INTERNATIONAL AIRPORT(BLR)", "CHENNAI INTERNATIONAL AIRPORT(MAA)", "BAHRAIN INTERNATIONAL AIRPORT(BAH)", "MUSCAT INTERNATIONAL AIRPORT(MCT)", "INDIRA GANDHI INTERNATIONAL AIRPORT(DEL)" }));
+        getContentPane().add(jComboBox2);
+        jComboBox2.setBounds(145, 149, 167, 27);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cape Town International Airport(CPT)", "East London Airport(ELS)", "Singapore  Changi  Airport(SIN)", "Heathrow Airport(LHR)", "Honk KOng International Airport(HKG)", "Hamad International Airport(DOH)", "Zurich Airport(ZRH)", "Frankfurt Airport(FRA)", "Paris-Charles De Gaulle(CDG)" }));
+        getContentPane().add(jComboBox3);
+        jComboBox3.setBounds(434, 149, 188, 27);
 
         jLabel7.setText("Class");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5)
-                                .addGap(31, 31, 31)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(jLabel1)))
-                .addContainerGap(108, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(36, 188, 34, 16);
+        getContentPane().add(jSlider1);
+        jSlider1.setBounds(145, 188, 190, 29);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
