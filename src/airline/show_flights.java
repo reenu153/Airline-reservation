@@ -26,12 +26,13 @@ public class show_flights extends javax.swing.JFrame {
         tf2.setText(date.toString());
         var ddate=obj.ddate.getDate();
         TF1.setText(ddate.toString()); 
-        Add_Flights ob=new Add_Flights();
-         try {  
+        var dep=obj.com1.getSelectedItem().toString(); 
+        var arr=obj.com2.getSelectedItem().toString(); 
+        
+        try {  
             Class.forName("com.mysql.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql:///user","reenu","merryboy"); 
-            java.sql.Statement stmt=c.createStatement();  
-            String sql="select * from add_flights where From Airport Code=ob.fcode and To Airport Code=ob.tcode";
+            Connection c = DriverManager.getConnection("jdbc:mysql:///user","reenu","merryboy");  
+            String sql="select * from add_flights ";//where Source=dep and Destination=arr";
             PreparedStatement ps=c.prepareStatement(sql);  
             ResultSet rs=ps.executeQuery();
             t1.setModel(DbUtils.resultSetToTableModel(rs));  
@@ -40,13 +41,13 @@ public class show_flights extends javax.swing.JFrame {
           catch (ClassNotFoundException ex) {          
         } catch (SQLException ex) {
                 }
-         if(obj.rad2.isSelected())
+         /*if(obj.rad2.isSelected())
          {
               try {  
             Class.forName("com.mysql.jdbc.Driver");
             Connection c = DriverManager.getConnection("jdbc:mysql:///user","reenu","merryboy"); 
             java.sql.Statement stmt=c.createStatement();  
-            String sql="select * from add_flights where From Airport Code=ob.tcode and To Airport Code=ob.fcode";
+            String sql="select * from add_flights where Source=arr and Destination=dep ";
             PreparedStatement ps=c.prepareStatement(sql);  
             ResultSet rs=ps.executeQuery();
             table2.setModel(DbUtils.resultSetToTableModel(rs));   
@@ -61,7 +62,7 @@ public class show_flights extends javax.swing.JFrame {
                 tf2.setVisible(false);
                 label.setVisible(false);
                 table2.setVisible(false);
-                }
+                }*/
                   
   }
     public show_flights() {
@@ -87,6 +88,7 @@ public class show_flights extends javax.swing.JFrame {
         tf2 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         table2 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,23 +136,36 @@ public class show_flights extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(table2);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("BOOK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TF1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(TF1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
+                        .addGap(285, 285, 285)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -166,9 +181,11 @@ public class show_flights extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label)
                     .addComponent(tf2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(jButton1)
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,6 +210,13 @@ public class show_flights extends javax.swing.JFrame {
 
        // TODO add your handling code here:
     }//GEN-LAST:event_tf2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+passenger obj=new passenger();
+obj.setVisible(true);
+show_flights o=new show_flights();
+o.setVisible(false);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,6 +255,7 @@ public class show_flights extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TF1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

@@ -244,7 +244,8 @@ public class book extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        show_flights obj=new show_flights();   
+        obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -294,8 +295,8 @@ public class book extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
-    private javax.swing.JComboBox<String> com1;
-    private javax.swing.JComboBox<String> com2;
+    public javax.swing.JComboBox<String> com1;
+    public javax.swing.JComboBox<String> com2;
     public com.toedter.calendar.JDateChooser ddate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

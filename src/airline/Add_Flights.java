@@ -296,7 +296,7 @@ public class Add_Flights extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 Add_Flights obj1=new Add_Flights();
-obj1.dispose();
+obj1.setVisible(false);
 admin obj=new admin();
 obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -334,7 +334,7 @@ obj.setVisible(true);// TODO add your handling code here:
                 } 
         JOptionPane.showMessageDialog(null, "FLIGHT ADDED"); 
         Add_Flights obj=new Add_Flights();
-        obj.dispose();
+        obj.setVisible(false);
         admin obj1=new admin();
         obj1.setVisible(true);
         // TODO add your handling code here:
