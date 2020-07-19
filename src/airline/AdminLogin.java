@@ -47,8 +47,14 @@ public class AdminLogin extends javax.swing.JFrame {
         jLabel2.setText("Password");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(41, 129, 59, 32);
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(136, 129, 153, 32);
+        jPasswordField1.setBounds(140, 130, 153, 32);
 
         jButton1.setText("Reset");
         getContentPane().add(jButton1);
@@ -105,6 +111,10 @@ public class AdminLogin extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments

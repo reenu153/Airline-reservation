@@ -22,8 +22,6 @@
         <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-    </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
@@ -43,8 +41,6 @@
     <Component class="javax.swing.ButtonGroup" name="buttonGroup9">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup10">
-    </Component>
-    <Component class="net.sourceforge.jdatepicker.util.JDatePickerUtil" name="jDatePickerUtil1">
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
@@ -99,8 +95,6 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jComboBox4" min="-2" pref="94" max="-2" attributes="0"/>
                               <Component id="com2" min="-2" pref="160" max="-2" attributes="0"/>
-                              <Component id="ddate" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                              <Component id="adate" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                               <Component id="rad2" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -153,24 +147,15 @@
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ddate" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="adate" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lab1" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lab1" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="rad1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -290,11 +275,6 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="ddate">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox4">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -327,11 +307,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="DATE OF RETURN"/>
       </Properties>
-    </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="adate">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>

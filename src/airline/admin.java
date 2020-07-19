@@ -31,8 +31,10 @@ public class admin extends javax.swing.JFrame {
         jToggleButton2 = new javax.swing.JToggleButton();
         jToggleButton3 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jToggleButton1.setText("Add Flights");
@@ -42,10 +44,14 @@ public class admin extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jToggleButton1);
+        jToggleButton1.setBounds(200, 90, 169, 35);
 
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jToggleButton2.setText("View Passengers");
         jToggleButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(jToggleButton2);
+        jToggleButton2.setBounds(200, 140, 169, 35);
 
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jToggleButton3.setText("Add Holiday Packages");
@@ -55,40 +61,18 @@ public class admin extends javax.swing.JFrame {
                 jToggleButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jToggleButton3);
+        jToggleButton3.setBounds(200, 190, 177, 35);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("    ADMIN MENU");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(190, 20, 231, 52);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton3))
-                        .addGap(93, 93, 93))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/fli3.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 610, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,6 +124,7 @@ obj.setVisible(true);// TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;

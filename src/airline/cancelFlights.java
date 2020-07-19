@@ -27,54 +27,77 @@ public class cancelFlights extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        scrollPane1 = new java.awt.ScrollPane();
         jLabel1 = new javax.swing.JLabel();
         textField1 = new java.awt.TextField();
         jLabel2 = new javax.swing.JLabel();
         textField2 = new java.awt.TextField();
+        jLabel3 = new javax.swing.JLabel();
+        textField3 = new java.awt.TextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("Last Name");
+        jLabel1.setText("Name");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(36, 91, 36, 16);
 
-        textField1.setText("textField1");
         textField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textField1ActionPerformed(evt);
             }
         });
+        getContentPane().add(textField1);
+        textField1.setBounds(224, 117, 167, 20);
 
         jLabel2.setText("Booking Reference Number");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(35, 117, 170, 20);
+        getContentPane().add(textField2);
+        textField2.setBounds(224, 147, 167, 20);
 
-        textField2.setText("textField2");
+        jLabel3.setText("Contact Number");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(35, 147, 103, 16);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                    .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addContainerGap(223, Short.MAX_VALUE))
-        );
+        textField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textField3);
+        textField3.setBounds(224, 87, 167, 20);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Credit Card/Debit Card", "Google Pay", "LazyPay", "JioMoney", "Netbanking", "Paytm" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(224, 177, 188, 27);
+
+        jButton1.setText("Cancel Booking");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(133, 251, 141, 29);
+
+        jLabel4.setText("Payment Method");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(35, 181, 104, 16);
+
+        jCheckBox1.setText("I'm not a robot");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jCheckBox1);
+        jCheckBox1.setBounds(23, 216, 125, 23);
+
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel5.setText("CANCEL BOOKING");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(110, 30, 260, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,6 +105,14 @@ public class cancelFlights extends javax.swing.JFrame {
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
+
+    private void textField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField3ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,9 +150,17 @@ public class cancelFlights extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private java.awt.ScrollPane scrollPane1;
     private java.awt.TextField textField1;
     private java.awt.TextField textField2;
+    private java.awt.TextField textField3;
     // End of variables declaration//GEN-END:variables
 }

@@ -71,10 +71,10 @@ public class holi extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/holiday/georgia.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/georgia.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/holiday/armenia-p.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/armenia-p.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -46,9 +46,12 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="136" y="129" width="153" height="32"/>
+          <AbsoluteConstraints x="140" y="130" width="153" height="32"/>
         </Constraint>
       </Constraints>
     </Component>
