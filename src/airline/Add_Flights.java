@@ -43,6 +43,7 @@ public class Add_Flights extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         popupMenu1 = new java.awt.PopupMenu();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         com2 = new javax.swing.JComboBox<>();
@@ -81,6 +82,9 @@ public class Add_Flights extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         popupMenu1.setLabel("popupMenu1");
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/fli4.jpeg"))); // NOI18N
+        jLabel8.setText("jLabel8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -214,10 +218,10 @@ public class Add_Flights extends javax.swing.JFrame {
         getContentPane().add(tcode);
         tcode.setBounds(166, 322, 85, 27);
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("/Users/anit/Desktop/fli5.jpeg")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/fli5.jpeg"))); // NOI18N
         jLabel13.setText("jLabel13");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(3, -20, 800, 540);
+        jLabel13.setBounds(0, -80, 850, 670);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -345,6 +349,7 @@ obj.setVisible(true);// TODO add your handling code here:
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

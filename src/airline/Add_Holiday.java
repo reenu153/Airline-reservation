@@ -40,6 +40,7 @@ public class Add_Holiday extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -107,6 +108,11 @@ public class Add_Holiday extends javax.swing.JFrame {
         getContentPane().add(jSlider1);
         jSlider1.setBounds(145, 188, 190, 29);
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/airline/flight2.jpeg"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(-5, -40, 740, 550);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -164,6 +170,7 @@ public class Add_Holiday extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
